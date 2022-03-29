@@ -1,0 +1,6 @@
+key_id,key_secret
+rzp_test_EchFBIZseLqzC5,HiadUYRPJZOieGYaWmTdrFB5
+
+
+sinevag755@f1xm.com
+Pass@123

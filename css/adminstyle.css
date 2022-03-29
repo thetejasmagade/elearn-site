@@ -1,0 +1,453 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: #09c6f9;
+  color: #063970;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(#09c6f9, #045de9);
+  border-radius: 20px;
+}
+
+/* Admin NavBrand Section Starts */
+
+.adminBrand {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.adminBrand a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 900;
+  padding-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.adminBrand a:hover {
+  color: #fff;
+}
+
+.adminBrand small {
+  font-size: 20px;
+  font-weight: 500;
+  color: #063970;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+/* Admin NavBrand Section Ends */
+
+/* Admin SideBar Section Starts */
+
+.adminHome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.SideBar {
+  width: 20%;
+  height: 100%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: linear-gradient(rgb(175, 219, 245), rgb(201, 255, 229));
+}
+
+.sideContent {
+  margin-top: 70px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Content {
+  margin-top: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sideBar-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBar-contents ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.sideBar-contents ul li {
+  padding: 12px 0px;
+  font-size: 18px;
+}
+
+.sideBar-contents ul li a {
+  text-decoration: none;
+  color: rgb(0, 49, 83);
+  transition: all 0.5s ease-in;
+  padding: 10px 5px;
+}
+
+.sideBar-contents ul li a:hover {
+  background: rgb(0, 49, 83);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.sideContent .cardContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 80px;
+}
+
+.adminCard {
+  width: 200px;
+  height: 200px;
+  border-radius: 33% 10% 35% 10% / 43% 10% 35% 10%;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px #333;
+  position: relative;
+  transition: 0.5s ease-in;
+}
+
+.adminCard::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 1px;
+  width: 80%;
+  margin: 0 0 0 25px;
+  background: #333;
+  z-index: 3;
+}
+
+.adminCard::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  height: 1px;
+  width: 80%;
+  margin: 0 0 0 25px;
+  background: #333;
+  z-index: 3;
+}
+
+.adminCard:nth-child(1) {
+  background: rgb(254, 143, 143);
+}
+
+.adminCard:nth-child(2) {
+  background: rgb(110, 203, 99);
+}
+
+.adminCard:nth-child(3) {
+  background: rgb(92, 122, 234);
+}
+
+.cardheading {
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  top: 10px;
+}
+
+.adminCard h4 {
+  font-size: 25px;
+  color: #da0037;
+  text-align: center;
+}
+
+a.view {
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  text-decoration: none;
+  bottom: 13px;
+  left: 70px;
+  transition: all 0.5s ease-in;
+}
+
+a.view:hover {
+  color: #333;
+  transform: scale(0.8);
+  opacity: 0.8;
+}
+
+.tableContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.heading {
+  background: #000;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+}
+
+table {
+  margin-bottom: 50px;
+  margin-top: 30px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr {
+  display: table-row;
+}
+
+.table th {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.table td {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+
+.table td,
+.table th {
+  padding: 10px;
+  border-top: 1px solid #dee2e6;
+}
+
+th {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td .trashbtn {
+  cursor: pointer;
+  padding: 7px 10px;
+  background: #808080;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.table td .penbtn {
+  cursor: pointer;
+  padding: 7px 10px;
+  background: #045de9;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.table td .trashbtn i,
+.table td .penbtn i {
+  font-size: 14px;
+}
+
+.box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin-bottom: 20px;
+  background: #f44;
+  color: #fff;
+  padding: 15px;
+}
+.box:hover {
+  background: #f44;
+  color: #fff;
+}
+.formColor {
+  background: linear-gradient(rgb(175, 219, 245), rgb(201, 255, 229));
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+}
+.text-center {
+  padding-top: 35px;
+  font-size: 25px;
+  font-weight: 900;
+}
+.form-group {
+  margin: 6px 4px;
+}
+label {
+  display: inline-block;
+  font-size: 14px;
+}
+.form-control {
+  padding: 5px 6px !important;
+  font-size: 16px !important;
+  font-weight: normal;
+}
+.btn-primary,
+.btn-danger {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Payment Status Starts */
+
+.payment-container {
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+.payment-content {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.payment-content label {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  padding: 0px 6px;
+}
+.stuBrand a {
+  color: #f14f03 !important;
+}
+.payment-content input[type="text"] {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+.payment-content input[type="text"]:focus {
+  border: 1px solid #09c6f9;
+  color: #09c6f9;
+}
+.payment-content input[type="submit"] {
+  margin-left: 5px;
+  padding: 5px 20px;
+}
+.signinbutton {
+  margin-right: 13px !important;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Payment Status Ends */
+
+/* Admin SideBar Section Ends  */
+
+@media (max-width: 375px) {
+  .SideBar {
+    width: 40%;
+    height: 100%;
+  }
+  .sideBar-contents ul li {
+    padding: 10px 0px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    overflow-x: auto;
+  }
+  .SideBar {
+    width: 40%;
+  }
+  .adminContent {
+    width: 60%;
+    display: flex;
+  }
+  .sideBar-contents ul li {
+    padding: 12px 0px;
+    font-size: 16px;
+  }
+  .sideContent .cardContent {
+    flex-direction: column;
+  }
+  .adminCard {
+    margin: 15px;
+  }
+  table {
+    overflow-x: scroll;
+    margin-left: auto;
+  }
+  .table th {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .table td {
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+  }
+  .table td,
+  .table th {
+    padding: 6px;
+    border-top: 1px solid #dee2e6;
+  }
+}

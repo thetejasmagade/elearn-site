@@ -1,0 +1,62 @@
+<?php
+if(!isset($_SESSION)){ 
+  session_start(); 
+}
+define('TITLE', 'Change Password');
+define('PAGE', 'changepass');
+include('./adminInclude/adminheader.php');
+include('../dbConnection.php');
+
+ if(isset($_SESSION['is_admin_login'])){
+  $adminEmail = $_SESSION['adminLogEmail'];
+ } else {
+  echo "<script> location.href='../index.php'; </script>";
+ }
+
+ $adminEmail = $_SESSION['adminLogEmail'];
+ if(isset($_REQUEST['adminPassUpdatebtn'])){
+  if(($_REQUEST['adminPass'] == "")){
+   // msg displayed if required field missing
+   $passmsg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+  } else {
+    $sql = "SELECT * FROM admin WHERE admin_email='$adminEmail'";
+    $result = $conn->query($sql);
+    if($result->num_rows == 1){
+     $adminPass = $_REQUEST['adminPass'];
+     $sql = "UPDATE admin SET admin_pass = '$adminPass' WHERE admin_email = '$adminEmail'";
+      if($conn->query($sql) == TRUE){
+       // below msg display on form submit success
+       $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
+      } else {
+       // below msg display on form submit failed
+       $passmsg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2 " role="alert" > Unable to Update </div>';
+      }
+    }
+   }
+}
+?>
+
+<div class="Content">
+ <div class="formColor">
+   <h3 class="text-center">Change Admin Password</h3>
+  <form action="" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="course_name">Email</label>
+      <input type="email" class="form-control" id="inputEmail" value=" <?php echo $adminEmail ?>" readonly>
+    </div>
+    <div class="form-group">
+      <label for="course_name">New Password</label>
+      <input type="text" class="form-control" id="inputnewpassword" placeholder="New Password" name="adminPass">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg mt-3" name="adminPassUpdatebtn">Update</button>
+         <button type="reset" class="btn btn-danger btn-lg mt-3" style="margin-left:5px">Reset</button>
+         <?php if(isset($passmsg)) {echo $passmsg; } ?>
+  </form>
+ </div>
+</div>
+
+
+
+<?php
+include('./adminInclude/adminfooter.php'); 
+?>

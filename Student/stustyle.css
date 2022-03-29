@@ -1,0 +1,282 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+*::selection {
+  background-color: #09c6f9;
+  color: #063970;
+}
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  border-radius: 20px;
+}
+.stuBrand {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.stuBrand a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 900;
+  padding-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.stuBrand a:hover {
+  color: #fff;
+}
+.studentarea {
+  width: 100%;
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.studentarea .stuSidebar {
+  margin-top: 50px;
+  position: sticky;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(#045de9, #09c6f9);
+}
+.studentarea .stuContent {
+  width: 80%;
+  display: flex;
+}
+.studentarea .stuSidebar ul {
+  list-style: none;
+}
+.studentarea .stuSidebar li {
+  padding: 12px 0px;
+  font-size: 18px;
+}
+.studentarea .stuSidebar li img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+.studentarea .stuSidebar li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-in;
+  padding: 10px 5px;
+}
+.studentarea .stuSidebar li a:hover {
+  background: #063970;
+  color: #fff;
+  border-radius: 10px;
+}
+.studentarea .stuContent .formContent {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 10px 10px;
+}
+.form-group {
+  margin: 25px 4px;
+}
+label {
+  display: inline-block;
+  font-size: 14px;
+}
+.form-control {
+  padding: 5px 6px !important;
+  font-size: 16px !important;
+  font-weight: normal;
+}
+
+/* Button Starts */
+.signinbutton {
+  margin-right: 13px !important;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+.signinbutton::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.signinbutton:hover::before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: movecolor 8s linear infinite;
+}
+.signinbutton:hover {
+  animation: movecolor 8s linear infinite;
+}
+@keyframes movecolor {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* Button Ends */
+
+/* My Course Section Starts */
+.myCourse-container {
+  background: #fff;
+  width: 95%;
+  margin: 30px auto 0;
+  padding: 5px;
+}
+.myCourse-row {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.myCourse-img {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.myCourse-content {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 16px;
+}
+.lessoncontent{
+  font-size: 16px;
+}
+/* My Course Section Ends */
+
+/* Lesson Section Starts */
+.lesson_container{
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, #09c6f9, #045de9);
+}
+.lesson_container h3{
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.lesson_container .lessonbutton{
+  margin-right: 13px !important;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 200px;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.lesson_heading{
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+.lesson-border{
+  border-right: 3px solid #03a9f4;
+}
+.lesson-border .lecture .lecturename{
+  color: #333;
+  margin-top: 10px;
+}
+.lesson-border .lecture .lecturename:hover{
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  color: #fff;
+}
+/* Lesson Section Ends */
+
+@media (max-width: 768px) {
+  * {
+    overflow-x: auto;
+  }
+  .studentarea {
+    flex-direction: column;
+  }
+  .studentarea .stuSidebar {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .studentarea .stuContent {
+    width: 100%;
+  }
+  .studentarea .stuSidebar li img {
+    width: 150px;
+    height: 150px;
+  }
+  .lesson_container .lessonbutton{
+    margin-right: 13px !important;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 200px;
+    border-radius: 30px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  * {
+    overflow-x: auto;
+  }
+  .studentarea .stuSidebar li img {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,1539 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+*::selection {
+  background-color: #09c6f9;
+  color: #063970;
+}
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(#09c6f9, #045de9);
+  border-radius: 20px;
+}
+
+/* Navigation Bar Start */
+
+header {
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  padding: 10px;
+  height: 70px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+
+header .navbar {
+  overflow: hidden;
+  margin: 0 10px;
+}
+.logo {
+  position: absolute;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+  top: 10px;
+  left: 5px;
+}
+.logo .fa-graduation-cap {
+  color: #130f40 !important;
+}
+
+header .navbar ul {
+  float: left;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 80px;
+}
+header .navbar ul li {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 10px;
+  position: relative;
+}
+
+header .navbar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+header .navbar ul li a:not(.active):before {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: #063970;
+  transition: all 0.6s linear;
+}
+header .navbar ul li a:hover::before {
+  width: 100%;
+}
+header .navbar ul li a:hover {
+  color: #063970;
+}
+
+header .navbar label .btn1,
+header .navbar label .cancel {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  top: 10px;
+  right: 20px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* Navigation Bar Ends */
+
+/* Home Section Starts */
+section {
+  min-height: 100vh;
+  padding: 1rem 7%;
+  padding-top: 16rem;
+}
+.home {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+}
+
+.home h1 {
+  text-shadow: 0 0 15px #89f7fe;
+  font-size: 30px;
+  font-weight: 700;
+}
+.home span {
+  font-size: 45px;
+  font-weight: 900;
+  color: #09c6f9;
+}
+.home p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.home .button {
+  border: 2px solid #09c6f9;
+  background: none;
+  padding: 10px 20px;
+  color: #09c6f9;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 10px;
+  box-shadow: 3px 0 10px #09c6f9;
+  transition: all 0.5s ease;
+}
+.home .button:hover {
+  text-shadow: 0 0 10px #333;
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  color: white;
+  border-radius: 10px;
+}
+.home .myProfileBtn {
+  border: 2px solid #f44236;
+  background: none;
+  padding: 10px 20px;
+  color: #f44236;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 10px;
+  box-shadow: 3px 0 10px #f44236;
+  transition: all 0.5s ease;
+}
+.home .myProfileBtn:hover {
+  text-shadow: 0 0 10px #333;
+  background: linear-gradient(to right, #f44236, #f14f03);
+  color: #fff;
+  border-radius: 10px;
+}
+.shape {
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  height: 230px;
+  width: 100%;
+  background: url(../images/shape.png);
+  block-size: 1600px 240px;
+  filter: drop-shadow(0 -0.1rem -0.1rem rgba(0, 0, 0, 0.8));
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1600px;
+  }
+}
+
+/* Home Section Ends */
+
+.bottom-banner {
+  margin-top: 10%;
+  background: transparent;
+}
+.bottom-banner .bottom-banner-content {
+  box-sizing: none;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.bottom-banner .bottom-banner-content h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  background: rgba(9, 198, 249, 0.2);
+  border-top: 1px solid rgba(9, 198, 249, 0.5);
+  border-left: 1px solid rgba(9, 198, 249, 0.5);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 50%);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Course Section Start */
+
+.course {
+  height: 100%;
+  background: #161623;
+  position: relative;
+  display: flex;
+}
+
+.course::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left bottom, #f00, #f0f, #f00, #fffc00);
+  clip-path: circle(30% at right 70%);
+}
+.course::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffec61, #f321d7, #f321d7);
+  clip-path: circle(20% at 5% 10%);
+}
+
+.course .heading {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  text-decoration: underline;
+}
+.course .card-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 20;
+  margin-bottom: 100px;
+}
+.course .card-container .card {
+  display: flex;
+  width: 35rem;
+  height: auto;
+  margin: 10px;
+  position: relative;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+}
+.course .card-container .card:hover::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  left: -110px;
+  width: 100%;
+  height: 150%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(3px);
+}
+.course .card-container .card:hover:nth-child(even) {
+  background: linear-gradient(to bottom, #ffec61, #f321d7, #ffec61);
+}
+.course .card-container .card:hover:nth-child(odd) {
+  background: linear-gradient(to top, #24ff72, #9a4eff, #24ff72);
+}
+.course .card-container .card .card-content {
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.course .card-container .card img {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.course .card-container .card .card-content h2 {
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+  text-decoration: underline;
+}
+.course .card-container .card .card-content p {
+  text-align: left;
+  font-size: 13px;
+  font-weight: normal;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.course .card-container .card .card-content .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course .card-container .card .card-content .card-footer p {
+  padding: 5px;
+  font-size: 15px;
+  align-items: center;
+}
+.course .card-container .card .card-content .card-footer p del {
+  text-decoration: line-through;
+}
+.course .card-container .card .card-content .card-footer p span {
+  color: yellow;
+  font-size: 20px;
+}
+.course .card-container .card .card-content .card-footer a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  color: #ffff;
+  background: linear-gradient(to right, #09c6f9, #045de9);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.course .course-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+.course .course-btn a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  background: linear-gradient(90deg, #f00, #f0f, yellow, #f00);
+  border-radius: 30px;
+  background-size: 400%;
+  position: relative;
+  z-index: 1;
+}
+.course .course-btn a::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  background: linear-gradient(90deg, #f00, #f0f, yellow, #f00);
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+.course .course-btn a:hover::before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: moveColor 8s linear infinite;
+}
+.course .course-btn a:hover {
+  animation: moveColor 8s linear infinite;
+}
+@keyframes moveColor {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* Course Section End */
+
+/* teacher section starts */
+
+.teacher {
+  text-align: center;
+  background: url(../images/teachers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  filter: grayscale(1000);
+  transition: filter 2s ease;
+}
+.teacher:hover {
+  filter: grayscale(0);
+}
+.teacher .heading {
+  margin-top: -100px;
+  text-align: center;
+  justify-content: center;
+  color: #063970;
+  font-size: 40px;
+}
+.teacher p {
+  text-align: center;
+  font-size: 16px;
+  justify-content: center;
+  width: 500px;
+  color: #666;
+  margin: 0px auto;
+}
+
+/* teacher section ends */
+
+/* Contact Us section Starts */
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/ct-background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ffff;
+}
+.contact .content p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #09c6f9;
+}
+.contact .contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.contact .contact-container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contact .contact-container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #09c6f9;
+}
+.contact .contact-container .contactInfo .box .text {
+  display: flex;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #ffff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contact .contact-container .contactInfo .box .text h2 {
+  font-weight: 500;
+  color: #09c6f9;
+}
+.contact .contact-container .contactForm {
+  width: 40%;
+  padding: 15px;
+  background: #ffff;
+}
+
+.contact .contact-container .contactForm .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contact .contact-container .contactForm .input-box input,
+.contact .contact-container .contactForm .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+.contact .contact-container .contactForm .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  margin: 10px 0;
+  pointer-events: none;
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contact .contact-container .contactForm .input-box input:focus,
+.contact .contact-container .contactForm .input-box textarea:focus {
+  color: #09c6f9;
+  border-bottom: 1px solid #09c6f9;
+}
+
+/* Contact Us Section Ends */
+
+/* Feedback section starts */
+
+/* Feedback section ends */
+
+/* Follow Section Starts */
+.follow-container {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  background: url(../images/follow.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 77%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.follow-container h1 {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  color: #333;
+  z-index: 1;
+}
+.follow-container .follow-icons {
+  position: absolute;
+  top: 80px;
+}
+.follow-container .follow-icons a {
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 40px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  margin: 10px 30px;
+  background-image: linear-gradient(#fff 50%, red 50%);
+  background-size: 100% 200%;
+  background-position: 0% 5%;
+  transition: all 0.5s ease;
+}
+.follow-container .follow-icons a:nth-child(1) {
+  color: #1976d3;
+  background-image: linear-gradient(#fff 50%, #1976d3 50%);
+  box-shadow: 0 0 10px #1976d3, 0 0 20px #1976d3, 0 0 40px #1976d3,
+    0 0 80px #1976d3;
+}
+.follow-container .follow-icons a:nth-child(2) {
+  color: #c13584;
+  background-image: linear-gradient(#fff 50%, #c13584 50%);
+  box-shadow: 0 0 10px #c13584, 0 0 20px #c13584, 0 0 40px #c13584,
+    0 0 80px #c13584;
+}
+.follow-container .follow-icons a:nth-child(3) {
+  color: #f44236;
+  background-image: linear-gradient(#fff 50%, #f44236 50%);
+  box-shadow: 0 0 10px #f44236, 0 0 20px #f44236, 0 0 40px #f44236,
+    0 0 80px #f44236;
+}
+.follow-container .follow-icons a:nth-child(4) {
+  color: #039af5;
+  background-image: linear-gradient(#fff 50%, #03a9f5 50%);
+  box-shadow: 0 0 10px #03a9f5, 0 0 20px #03a9f5, 0 0 40px #03a9f5,
+    0 0 80px #03a9f5;
+}
+.follow-container .follow-icons a:nth-child(5) {
+  color: #fffc00;
+  background-image: linear-gradient(#fff 50%, #fffc00 50%);
+  box-shadow: 0 0 10px #fffc00, 0 0 20px #fffc00, 0 0 40px #fffc00,
+    0 0 80px #fffc00;
+}
+.follow-container .follow-icons a:hover {
+  background-position: 0% 100%;
+  color: white;
+}
+
+/* Follow Section Ends */
+
+/* footer section starts  */
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(to right, #000000, #130f40);
+  color: #ffff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.footer .row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer .row .col {
+  flex-basis: 33.33%;
+  padding: 10px;
+}
+.footer .row .about h1 {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.footer .row .about p {
+  font-weight: 300;
+}
+.footer .row .col {
+  border-right: 2px solid #ccc;
+}
+.footer .row .col:last-child {
+  border-right: none;
+}
+.footer .row .col h3 {
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffff;
+  position: relative;
+  margin-bottom: 20px;
+}
+.footer .row .col h3 .underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.footer .row .col h3 .underline span {
+  width: 15px;
+  height: 100%;
+  border-radius: 5px;
+  background: #ffff;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: movingBox 3s linear infinite;
+}
+@keyframes movingBox {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.footer .row .about .social {
+  margin-top: 50px;
+}
+.footer .row .about .social a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffff;
+  border-radius: 50%;
+}
+.footer .row .about .social a:nth-child(1) {
+  color: #1976d3;
+}
+.footer .row .about .social a:nth-child(1):hover {
+  background: #1976d3;
+  color: #ffff;
+}
+.footer .row .about .social a:nth-child(2) {
+  color: #c13584;
+}
+.footer .row .about .social a:nth-child(2):hover {
+  background: #c13584;
+  color: #ffff;
+}
+.footer .row .about .social a:nth-child(3) {
+  color: #f44236;
+}
+.footer .row .about .social a:nth-child(3):hover {
+  background: #f44236;
+  color: #ffff;
+}
+.footer .row .about .social a:nth-child(4) {
+  color: #039af5;
+}
+.footer .row .about .social a:nth-child(4):hover {
+  background: #039af5;
+  color: #ffff;
+}
+.footer .row .about .social a:nth-child(5) {
+  color: #fffc00;
+}
+.footer .row .about .social a:nth-child(5):hover {
+  background: #fffc00;
+  color: #ffff;
+}
+.footer .row .links ul {
+  list-style: none;
+}
+.footer .row .links ul li {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.footer .row .links ul li a {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: normal;
+  transition: all 0.5s linear;
+}
+.footer .row .links ul li a:hover {
+  padding-left: 10px;
+}
+.footer .row .contactUs table,
+.footer .row .contactUs table td {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.footer .row .contactUs table td a {
+  text-decoration: none;
+  color: #ffff;
+}
+.footer hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+.copyright {
+  text-align: center;
+}
+
+/* footer section ends  */
+
+/* Student Resgistration form starts */
+
+.modal {
+  background: linear-gradient(to right, #000000, #130f40);
+  position: relative;
+}
+.modal-header {
+  padding: 15px 10px !important;
+}
+.modal-footer {
+  padding: 15px !important;
+}
+.modal-footer > * {
+  margin: 5px;
+}
+.modal-body {
+  padding: 30px 5px !important;
+}
+.modal-body label {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 5px;
+}
+.form-group:first-child {
+  padding-top: 0 !important;
+}
+.form-group {
+  padding-top: 20px !important;
+}
+.modal-body .form-group span {
+  color: #e91e63;
+  font-size: 12px;
+}
+.form-group small small {
+  font-size: 12px;
+  padding-left: 5px;
+}
+.modal-content {
+  border: none !important;
+  outline: none !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.modal-title {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.btn-close {
+  font-size: 15px;
+}
+
+.signinbutton {
+  margin-right: 13px !important;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+.signinbutton::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.signinbutton:hover::before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: movecolor 8s linear infinite;
+}
+.signinbutton:hover {
+  animation: movecolor 8s linear infinite;
+}
+@keyframes movecolor {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* student Resistration form ends */
+
+/* Course Page Starts */
+.remove-marg {
+  margin: 0px;
+  padding: 69px 0px 0px;
+  overflow: hidden;
+  background: #000;
+}
+.vid-parent {
+  position: relative;
+}
+video {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+  opacity: 0.8;
+}
+.vid-content {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 0%;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+.vid-content h1 {
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+}
+/* Course Page Ends */
+
+/* Payment Status Starts */
+
+.payment-container {
+  width: 100%;
+  height: 20vh;
+  background: #fff;
+  position: relative;
+}
+.payment-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.payment-content label {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  padding: 0px 6px;
+}
+.stuBrand a {
+  color: #f14f03 !important;
+}
+.payment-content input[type="text"] {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+.payment-content input[type="text"]:focus {
+  border: 1px solid #09c6f9;
+  color: #09c6f9;
+}
+.payment-content input[type="submit"] {
+  margin-left: 5px;
+  padding: 5px 20px;
+}
+
+/* Payment Status Ends */
+
+/* Course Details Page Starts */
+.course1 {
+  background: #fff;
+  position: relative;
+  min-height: 90vh;
+}
+.course1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(255, 81, 0), yellow);
+  clip-path: circle(20% at 5% 10%);
+}
+.course1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(red, blue);
+  clip-path: circle(30% at right 70%);
+}
+.coursedetail {
+  width: 100%;
+  min-height: 50vh;
+  padding-top: 40px;
+  position: relative;
+}
+.details {
+  width: 100%;
+  padding: 30px 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1;
+}
+.img {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.detailContent {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  margin-right: 10px;
+  margin-left: 50px;
+}
+.detailContent .detail-card-body {
+  width: 100%;
+  color: #000;
+  padding: 20px;
+  position: relative;
+}
+.detailContent .detail-card-body .detail-card-title {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.detailContent .detail-card-body .detail-card-text {
+  color: #000;
+  font-size: 14px;
+  margin: 8px 0px;
+  font-weight: 300;
+  padding: 5px 0;
+}
+.detailContent .detail-card-body .detail-card-text del {
+  text-decoration: line-through;
+}
+.detailContent .detail-card-body .detail-card-text .detail-price {
+  color: #f00;
+  font-size: 16px;
+}
+.detailContent .detail-card-body .signinbutton {
+  position: absolute;
+  right: 57px;
+  bottom: 17px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.detailsTable {
+  margin-top: 30px;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.courseontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+  z-index: 3;
+}
+.courseontent table {
+  width: 100%;
+}
+.courseontent table thead {
+  height: 50px;
+  background: rgba(0, 255, 255, 0.2);
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.courseontent table tbody {
+  padding: 20px;
+  font-size: 16px;
+  color: #000;
+  background: rgba(255, 0, 0, 0.2);
+}
+.courseontent table tbody:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.courseontent table tbody td,
+.courseontent table tbody th {
+  text-align: left;
+  padding-left: 10px;
+}
+.courseontent table,
+.courseontent th,
+.courseontent td {
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* Course Details Page Ends */
+
+/* Admin Page Starts */
+.admin {
+  width: 100;
+  height: 100vh;
+  background: #000;
+  position: relative;
+}
+.admin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: red;
+}
+.admin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: yellow;
+}
+.admin .signinbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+/* Admin Page Ends */
+
+@media (max-width: 851px) {
+  .contact {
+    padding: 12px 100px;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contactForm {
+    margin-top: 40px;
+  }
+  .contact .contact-container .contactForm,
+  .contact .contact-container .contactInfo {
+    width: 100%;
+  }
+  .course .card-container .card:hover:nth-child(even) {
+    transform: none;
+    background: none;
+  }
+  .course .card-container .card:hover:nth-child(odd) {
+    transform: none;
+    background: none;
+  }
+}
+
+@media (max-width: 1195px) {
+  .logo {
+    font-size: 30px;
+    color: #063970;
+    top: 20px;
+    left: 10px;
+    position: fixed;
+    text-align: center;
+  }
+  header .navbar {
+    margin: 0 5px;
+  }
+  header .navbar ul {
+    margin-right: -3px;
+  }
+  header .navbar ul li {
+    margin: 0px 5px;
+    position: relative;
+  }
+  header .navbar ul li a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 896px) {
+  header .navbar {
+    margin: 10px 5px;
+  }
+  header .navbar ul li a {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  .home h1 {
+    margin-top: 20px;
+    text-shadow: 10px 0 10px #89f7fe, 0 10px 10px #66a6ff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .home p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .shape {
+    bottom: -1px;
+    height: 157px;
+  }
+
+  .logo {
+    font-size: 30px;
+    display: block;
+    color: white;
+    top: 20px;
+    left: 40%;
+    position: fixed;
+    text-align: center;
+  }
+  label #btn1 {
+    font-size: 30px;
+    display: block;
+    top: 25px;
+    position: fixed;
+  }
+  header .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000000, #130f40);
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.4s linear;
+  }
+  header .navbar ul li {
+    display: block;
+    margin: 18px 0;
+    line-height: 30px;
+  }
+  header .navbar ul li a {
+    font-size: 18px;
+  }
+  header .navbar ul li a:hover {
+    color: #09c6f9;
+  }
+  header .navbar ul li a:hover:before {
+    width: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #check:checked ~ label #btn1 {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    font-size: 30px;
+    display: block;
+    top: 25px;
+    position: fixed;
+  }
+  .bottom-banner {
+    display: none;
+  }
+
+  .course::before {
+    display: none;
+  }
+  .course::after {
+    display: none;
+  }
+  .course .course-btn {
+    overflow: hidden;
+  }
+  .course .course-btn a {
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+    left: 0;
+  }
+
+  .teacher p {
+    width: auto;
+  }
+  .contact {
+    padding: 12px 100px;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contactForm {
+    margin-top: 40px;
+  }
+  .contact .contact-container .contactForm,
+  .contact .contact-container .contactInfo {
+    width: 100%;
+  }
+  .follow-container {
+    min-height: 40vh;
+  }
+  .follow-container .follow-icons {
+    top: 70px;
+  }
+  .follow-container .follow-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: all 0.5s ease;
+  }
+  .follow-container .follow-icons a:nth-child(even) {
+    box-shadow: none;
+  }
+  .follow-container .follow-icons a:nth-child(odd) {
+    box-shadow: none;
+  }
+  .follow-container .follow-icons a:hover {
+    background-position: 0% 100%;
+    color: white;
+  }
+  .footer .row .col {
+    flex-basis: 100%;
+    padding: 20px;
+    border-right: none;
+  }
+  .footer .row .col h3 .underline {
+    top: 35px;
+  }
+  .footer .row .about .social a {
+    margin: 0 7px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffff;
+    border-radius: 50%;
+  }
+
+  .user {
+    border-radius: 100px;
+    padding: 20px 40px;
+    width: max-content;
+  }
+  .user p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 60px 0 30px;
+  }
+  .user h3 {
+    font-size: 20px;
+  }
+
+  .user img {
+    top: -53px;
+    width: 100px;
+    height: 100px;
+    border: 7px solid #fff;
+  }
+  /* course details starts */
+  .details {
+    padding: 0 35px;
+    flex-direction: column;
+  }
+  .img {
+    flex-basis: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .detailContent {
+    flex-basis: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .vid-content {
+    letter-spacing: 20px;
+  }
+  .vid-content h1 {
+    font-size: 25px;
+  }
+  /* course details ends */
+}
+@media (max-width: 425px) {
+  .slideshow-container {
+    height: 108vh;
+  }
+  .user {
+    border-radius: 90px;
+    padding: 5px 15px;
+  }
+  /* course details starts */
+  .detailContent .detail-card-body {
+    padding: 10px;
+  }
+  .detailContent .detail-card-body .detail-card-title {
+    font-size: 14px;
+  }
+  .detailContent .detail-card-body .detail-card-text {
+    font-size: 12px;
+  }
+  .vid-content {
+    letter-spacing: 5px;
+  }
+  /* course details ends */
+}
+@media (max-width: 1024px) {
+  .user {
+    border-radius: 130px;
+    padding: 5px 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .home h1 {
+    text-shadow: none;
+  }
+  .contact {
+    padding: 20px 25px;
+  }
+  .follow-container h1 {
+    display: none;
+  }
+  .course .course-btn a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .footer .row .about .social a {
+    margin: 0 2px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .footer .row .about .social a {
+    margin: 0 7px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0px;
+    background: none;
+    border-radius: 50%;
+  }
+  .teacher .heading {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .teacher p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .slideshow-container h1 {
+    font-size: 23px;
+    margin-top: 2px;
+  }
+  .user p {
+    font-size: 11px;
+  }
+  .user h3 {
+    font-size: 15px;
+  }
+}
